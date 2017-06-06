@@ -62,7 +62,7 @@ AFRAME.registerComponent('asvideo', {
         var movieMaterial = new THREE.MeshBasicMaterial({
             map: videoTexture,
             overdraw: true,
-            side: THREE.DoubleSide
+            side: THREE.FrontSide
         });
 
         var movieGeometry = new THREE.PlaneGeometry(data.width, data.height, 4, 4);
