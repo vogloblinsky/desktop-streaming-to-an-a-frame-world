@@ -11,7 +11,7 @@ Streaming desktop windows to an A-Frame 3D world
 
 ## Setup
 
-### Source screens
+### 1. Source screens
 
 - Terminal in size 450x800px
 - Atom in size 800x450px
@@ -39,7 +39,7 @@ y : 0
 width : 450
 height: 800
 
-### Node.js proxy
+### 2. Node.js proxy
 
 VLC stream doesn't have the HTTP header `Access-Control-Allow-Origin`, so this Node.js proxy is just here to add it.
 
@@ -48,11 +48,11 @@ npm i
 node proxy.js
 ```
 
-### Open the test page :
+### 3. Open the test page :
 
 http://YOURLOCALHOST/src/simple-video-streamed.html
 
-### Open the final page :
+### 4. Open the final page :
 
 http://YOURLOCALHOST/src/
 
