@@ -1,5 +1,8 @@
 # Desktop streaming to an A-Frame world
+
 Streaming desktop windows to an A-Frame 3D world
+
+![screenshot](screenshots/view.png)
 
 ## Requirements
 
@@ -10,8 +13,8 @@ Streaming desktop windows to an A-Frame 3D world
 
 ### Source screens
 
-- Terminal in size 500x885px
-- Atom in size 885x500px
+- Terminal in size 450x800px
+- Atom in size 800x450px
 - two VLC app opened, one for each previous app which will be streamed
 
 ```
@@ -36,5 +39,21 @@ y : 0
 width : 450
 height: 800
 
+### Node.js proxy
 
-http://192.168.1.18/Conferences/webvr-api/desktop-streaming-to-an-a-frame-world/simple-video-streamed.html
+VLC stream doesn't have the HTTP header `Access-Control-Allow-Origin`, so this Node.js proxy is just here to add it.
+
+```
+npm i
+node proxy.js
+```
+
+### Open the test page :
+
+http://YOURLOCALHOST/src/simple-video-streamed.html
+
+### Open the final page :
+
+http://YOURLOCALHOST/src/
+
+and enjoy
