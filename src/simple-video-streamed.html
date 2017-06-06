@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <video width="450" src="http://192.168.1.18:8000" autoplay id="stream" crossOrigin="Anonymous"></video>
+    <!--<video width="800" src="http://192.168.1.18:8001" autoplay id="stream" type="video/ogg; codecs=theora" crossOrigin="Anonymous"></video>-->
+
+    <script>
+        var v = document.getElementsByTagName("video")[0];
+        console.log(v);
+        v.addEventListener('canplay', function() {
+            console.log('canplay');
+        });
+        v.addEventListener('loadstart', function() {
+            console.log('loadstart');
+        });
+        v.addEventListener('loadeddata', function() {
+            console.log('loadeddata');
+        });
+        v.addEventListener('loadedmetadata', function() {
+            console.log('loadedmetadata');
+        });
+        v.addEventListener('progress', function() {
+            console.log('progress');
+        });
+    </script>
+</body>
+
+</html>
